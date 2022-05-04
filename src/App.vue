@@ -1,125 +1,85 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "@/components/HelloWorld.vue";
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
+  <div class="wrapper">
+    <RouterView />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <div class="footer">
+      <div class="player">
+        <p>
+          Hårdkodad audio-source: <br />"P3 Spel - Avsnitt 54. Rollspela som bondtölp i GTA"
+        </p>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+        <audio controls id="mediaPlayer">
+          <source
+            src="https://sverigesradio.se/topsy/ljudfil/srapi/8303510.mp3"
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="navbar">
+        <nav>
+          <RouterLink to="/"><font-awesome-icon icon="fa-thin fa-alarm-clock"/></RouterLink>
+          <!-- <RouterLink to="/">Hem</RouterLink> -->
+          <RouterLink to="/search">Sök</RouterLink>
+          <RouterLink to="/filter">Filter</RouterLink>
+          <RouterLink to="/profile">Profil</RouterLink>
+        </nav>
+      </div>
     </div>
-  </header>
-
-  <RouterView />
+  </div>
 </template>
+
+<script>
+export default {
+  name: 'App'
+}
+</script>
 
 <style>
 @import "@/assets/base.css";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+.player, .navbar {
+  /* border: 1px solid black; */
 }
 
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-top: 2rem;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.player {
+	border: 1.5px solid red;
+	min-width: 100%;
+	bottom: 
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+nav * {
+  padding-bottom: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 0;
+  border: 1.5px solid black;
+  font-size: 2em;
+  /* height: 3em;*/
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
+.footer {
+  position: fixed;
+  bottom: 0em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1.5px solid red; */
 }
 
 @media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+  /* Desktop */
 }
 </style>

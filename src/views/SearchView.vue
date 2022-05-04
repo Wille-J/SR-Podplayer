@@ -1,17 +1,17 @@
 <script setup>
-// Här kan vi importera saker om vi vill,
-// har vi en "setup" så ligger den högst, 
-// men taggen är inte ett krav
+import SearchList from '@/components/SearchList.vue'
 </script>
 
 <template>
+	<div class="search">
+		<h1>Gör en sökning:</h1>
+		<input type="search" name="searchBox" class="searchBox" />
+		<input type="button" value="Search" />
+	</div>
 
-	<header>
-		<h1>Välkommen tillbaka! 
-			<br>Fortsätt lyssna.. 
-		</h1>
-    </header>
-
+	<div class="resultList">
+		<SearchList />
+	</div>
 </template>
 
 <script>
@@ -25,9 +25,7 @@ export default {
 <style scoped>
 @import "@/assets/base.css";
 
-#mediaPlayer {
-	margin-top: 2em;
-}
+/* Mobile first CSS */
 
 @media (min-width: 1024px) {
 	/* Desktop */
