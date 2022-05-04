@@ -57,7 +57,6 @@ export default {
 .player {
 	border: 1.5px solid red;
 	min-width: 100%;
-	bottom: 
 }
 
 nav * {
