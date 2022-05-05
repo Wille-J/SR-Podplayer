@@ -24,23 +24,14 @@ import { RouterLink, RouterView } from "vue-router";
       <div class="navbar">
         <nav>
           <RouterLink to="/"><img src="./assets/navbar/home.png" alt="home.png" width="40" height="40"></RouterLink>
-          <RouterLink to="/search"><img src="./assets/navbar/search.png" alt="search.png" width="40" height="40">
-          </RouterLink>
-          <RouterLink to="/library"><img src="./assets/navbar/library.png" alt="library.png" width="40" height="40">
-          </RouterLink>
-          <RouterLink to="/profile"><img src="./assets/navbar/profile.png" alt="profile.png" width="40" height="40">
-          </RouterLink>
+          <RouterLink to="/search"><img src="./assets/navbar/search.png" alt="search.png" width="40" height="40"></RouterLink>
+          <RouterLink to="/library"><img src="./assets/navbar/library.png" alt="library.png" width="40" height="40"></RouterLink>
+          <RouterLink to="/profile"><img src="./assets/navbar/profile.png" alt="profile.png" width="40" height="40"></RouterLink>
         </nav>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'App'
-}
-</script>
 
 <style>
 @import "@/assets/base.css";
@@ -61,6 +52,7 @@ export default {
 .player {
   border: 0.5px solid purple;
   min-width: 100%;
+  margin-bottom: 0.5em;
 }
 
 nav img {
