@@ -1,16 +1,16 @@
 <script setup>
 // Här kan vi importera saker om vi vill,
-// har vi en "setup" så ligger den högst, 
+// har vi en "setup" så ligger den högst,
 // men taggen är inte ett krav
 </script>
 
 <template>
 
 	<header>
-		<h1>Välkommen tillbaka! 
-			<br>Fortsätt lyssna.. 
+		<h1>Välkommen tillbaka!
+			<br>Fortsätt lyssna..
 		</h1>
-    </header>
+	</header>
 
 </template>
 
@@ -23,13 +23,7 @@ export default {
 </script>
 
 <style scoped>
-@import "@/assets/base.css";
-
 #mediaPlayer {
 	margin-top: 2em;
-}
-
-@media (min-width: 1024px) {
-	/* Desktop */
 }
 </style>
