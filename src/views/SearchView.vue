@@ -11,8 +11,10 @@ import srApi from "@/services/sr.js"
 
 	<div class="resultList">
 		<div v-for="pod in pods">
-			{{ pod.id }}
+			<br>
 			{{ pod.name }}
+			| ID: {{ pod.id }} |
+
 			<input type="button" @click="updatePlayerUrl(pod.id)" value="Lyssna">
 		</div>
 

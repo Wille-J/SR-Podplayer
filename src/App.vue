@@ -12,7 +12,7 @@ import { RouterLink, RouterView } from "vue-router";
     <div class="footer">
       <div class="player">
         <p>
-          Hårdkodad audio-source: <br />"P3 Spel - Avsnitt 54. Rollspela som bondtölp i GTA"
+          Hårdkodad audio-source: <br>"P3 Spel - Avsnitt 54. Rollspela som bondtölp i GTA"
         </p>
 
         <audio controls id="mediaPlayer">
@@ -24,9 +24,12 @@ import { RouterLink, RouterView } from "vue-router";
       <div class="navbar">
         <nav>
           <RouterLink to="/"><img src="./assets/navbar/home.png" alt="home.png" width="40" height="40"></RouterLink>
-          <RouterLink to="/search"><img src="./assets/navbar/search.png" alt="search.png" width="40" height="40"></RouterLink>
-          <RouterLink to="/library"><img src="./assets/navbar/library.png" alt="library.png" width="40" height="40"></RouterLink>
-          <RouterLink to="/profile"><img src="./assets/navbar/profile.png" alt="profile.png" width="40" height="40"></RouterLink>
+          <RouterLink to="/search"><img src="./assets/navbar/search.png" alt="search.png" width="40" height="40">
+          </RouterLink>
+          <RouterLink to="/library"><img src="./assets/navbar/library.png" alt="library.png" width="40" height="40">
+          </RouterLink>
+          <RouterLink to="/profile"><img src="./assets/navbar/profile.png" alt="profile.png" width="40" height="40">
+          </RouterLink>
         </nav>
       </div>
     </div>

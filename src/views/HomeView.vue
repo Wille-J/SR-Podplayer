@@ -23,7 +23,4 @@ export default {
 </script>
 
 <style scoped>
-#mediaPlayer {
-	margin-top: 2em;
-}
 </style>
