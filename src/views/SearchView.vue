@@ -1,13 +1,19 @@
 <script setup>
 import srApi from "@/services/sr.js"
+import { mapStores } from "pinia";
+import { usePlayerStore } from "@/stores/player.js"
 </script>
 
 <template>
 	<div class="search">
 		<h1>Gör en sökning:</h1>
 		<input type="search" v-model="searchText" class="searchBox" />
-		<input type="button" value="Search" @click="performPodSearch" />
+		<input type="button" value="Search" @click="performPodSearch" @keyup.enter="performPodSearch" />
 	</div>
+
+	<!-- /search/:searchText -->
+	<!-- /search/results/episodes -->
+	<!-- /search/episodes -->
 
 	<div class="resultList">
 		<div v-for="pod in pods">
@@ -15,34 +21,36 @@ import srApi from "@/services/sr.js"
 			{{ pod.name }}
 			| ID: {{ pod.id }} |
 
-			<input type="button" @click="updatePlayerUrl(pod.id)" value="Lyssna">
+			<!-- @click För att uppdatera spelarens URL -->
+			<input type="button" @click="performUpdatePlayer(pod.id)" value="Välj" />
 		</div>
-
-		<audio :src="audioUrl"></audio>
 	</div>
 </template>
 
 <script>
+
 export default {
 	data() {
-		return ({
+		return {
 			searchText: "",
 			pods: [],
-			audioUrl: ""
-		})
+		}
 	},
 	methods: {
 		async performPodSearch() {
 			this.pods = await srApi.searchForPod(this.searchText)
 		},
-		updatePlayerUrl(id) {
-			this.audioUrl = `https://sverigesradio.se/topsy/ljudfil/srapi/${id}.mp3`
+		async performUpdatePlayer(id) {
+			console.log("poddens ID: " + id)
+			let audioUrl = await srApi.updatePlayerUrl(id)
+			console.log(audioUrl)
+			this.playerStore.changeUrl(audioUrl)
+		},
+	},
 
-			// https://api.sr.se/api/v2/episodes?programid=` + {{ id }} + `&size=10&format=json
-			//`https://sr.se/pod=${id}`
-			// ID FÖR P3 SPEL: 8303510
-		}
-	}
+	computed: {
+		...mapStores(usePlayerStore),
+	},
 }
 </script>
 

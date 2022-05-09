@@ -27,6 +27,29 @@ const sr = {
 
 		return podResult
 	},
+
+	async getEpisodes(id) {
+		const endpoint =
+			`https://api.sr.se/api/v2/episodes?programid=` +
+			id +
+			`&size=1&format=json`
+		const response = await fetchJson(endpoint)
+
+		return response.episodes
+	},
+
+	async updatePlayerUrl(id) {
+		// Uppdatera spelaren med en ny URL
+		const endpoint =
+			`https://api.sr.se/api/v2/episodes?programid=` +
+			id +
+			`&size=1&format=json`
+		const response = await fetchJson(endpoint)
+		const episodes = response.episodes
+		const updateResult = episodes[0].listenpodfile.url
+
+		return updateResult
+	},
 }
 
 export default sr

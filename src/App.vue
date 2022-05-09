@@ -1,24 +1,20 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import PodPlayer from "@/components/PodPlayer.vue";
 </script>
 
 <template>
-  <div>
 
-  </div>
   <div class="wrapper">
     <RouterView />
 
     <div class="footer">
       <div class="player">
         <p>
-          Hårdkodad audio-source: <br>"P3 Spel - Avsnitt 54. Rollspela som bondtölp i GTA"
+          <em>"PODDENS NAMN - Avsnitt XXX. Titel..."</em>
         </p>
 
-        <audio controls id="mediaPlayer">
-          <source src="https://sverigesradio.se/topsy/ljudfil/srapi/8303510.mp3" type="audio/mpeg" />
-          Your browser does not support the audio tag.
-        </audio>
+        <PodPlayer />
       </div>
 
       <div class="navbar">
