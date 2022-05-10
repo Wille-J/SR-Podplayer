@@ -7,9 +7,9 @@
 <template>
 
 	<header>
-		<h1>Välkommen tillbaka!
-			<br>Fortsätt lyssna..
-		</h1>
+		<h1>Poddlers.</h1>
+		<h2>Välkommen tillbaka!</h2>
+		<h3>Fortsätt lyssna..</h3>
 	</header>
 
 </template>

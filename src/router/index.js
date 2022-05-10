@@ -15,6 +15,11 @@ const router = createRouter({
 			component: () => import("../views/SearchView.vue"),
 		},
 		{
+			path: "/pod",
+			name: "pod",
+			component: () => import("../views/PodView.vue"),
+		},
+		{
 			path: "/library",
 			name: "library",
 			component: () => import("../views/LibraryView.vue"),
