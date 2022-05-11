@@ -6,9 +6,11 @@ import { usePodStore } from "@/stores/pod.js"
 </script>
 
 <template>
+
 	<div class="search">
 		<input type="search" v-model="searchText" class="searchBox" placeholder="Sök" />
 		<input type="button" value="Search" @click="performPodSearch" @keyup.enter="performPodSearch" />
+		<br>Eventuell filtreringsfunktion...
 	</div>
 
 	<!-- FÖRSLAG PÅ NAVIGERING: -->
@@ -16,13 +18,22 @@ import { usePodStore } from "@/stores/pod.js"
 	<!-- /search/results/episodes -->
 	<!-- /search/episodes -->
 
-	<div class="resultList">
+	<div class="resultList"> <!-- GÖRA OM TILL EGET, SCROLLBART FÖNSTER -->
 		<RouterLink to="/pod" v-for="pod in pods" @click="performLoadEpisodes(pod)" class="listItem">
-			<img :src="pod.image" alt="pod-pic" width="100" height="100">
+			<img :src="pod.image" alt="pod-pic" width="90" height="90">
 			{{ pod.name }}
+			<br><br>
+			{{ pod.category }}
 		</RouterLink>
 		<!-- HAMPUS: a tagg - prevent click - överskriva @click-->
 	</div>
+
+	Sökhistorik:
+	<br>
+	<br>Enklare databas?
+	<br>PiniaStore?
+	<br>(under denna session) 
+
 </template>
 
 <script>
@@ -42,7 +53,7 @@ export default {
 			this.podStore.changePod(pod)
 			let audioUrl = await srApi.loadLatestEpisode(pod.id)
 			this.playerStore.changeUrl(audioUrl)
-			// this.$route.push('/pod')				HAMPUS: LADDAR IN VIEW:EN NÄR ALLT ÄR KLART!
+			// this.$route.push('/pod')		HAMPUS: Laddar in view:en när allt är klart.
 		},
 	},
 
@@ -59,18 +70,33 @@ export default {
 }
 
 .listItem {
-	border: 1px solid black;
-	border-radius: 1em;
 	align-items: center;
+	border-radius: .7em;
 }
 
 .listItem:hover {
-	background-color: rgb(160, 160, 160);
+	background-color: rgb(160, 159, 169);
+	transition: .5s;
 }
 
 .resultList * {
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	padding: .2em;
+	text-align: left;
+	text-decoration: none;
+	color: black;
+}
+
+.resultList {
+	border-radius: .7em;
+	background-color: rgb(190, 189, 201);
+	padding: 1em;
+	width: 90%;
+}
+
+img {
+	border-radius: .7em;
+	margin-right: .75em;
 }
 </style>

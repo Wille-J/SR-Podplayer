@@ -7,7 +7,6 @@ export const usePlayerStore = defineStore({
 	}),
 	actions: {
 		changeUrl(url) {
-			console.log("url:", url)
 			this.url = url
 		},
 	},

@@ -8,9 +8,18 @@
 
 	<header>
 		<h1>Poddlers.</h1>
-		<h2>Välkommen tillbaka!</h2>
-		<h3>Fortsätt lyssna..</h3>
 	</header>
+
+	<div class="continueListen">
+		<h2>Fortsätt lyssna</h2>
+		<p>Alternativ till att ha en databas...</p>
+	</div>
+
+	<div class="likedPods">
+		<h2>Gillade poddar</h2>
+		<p>Mest lyssnade poddar från API ?</p>
+		<p>Det finns programkategorier i det stora podd-anropet</p>
+	</div>
 
 </template>
 

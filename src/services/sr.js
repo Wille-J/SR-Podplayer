@@ -21,6 +21,7 @@ const sr = {
 					name: pod.name,
 					image: pod.programimage,
 					desc: pod.description,
+					// category: pod.programcategory.name,
 				}
 
 				podResult.push(podObject)
@@ -42,16 +43,14 @@ const sr = {
 	},
 
 	async loadLatestEpisode(id) {
-		// Senaste avsnittet för ett visst programid
+		// Det senaste avsnittet för ett visst programid
 		const endpoint =
-			`https://api.sr.se/api/v2/episodes?programid=` +
+			`http://api.sr.se/api/v2/episodes/getlatest?programid=` +
 			id +
-			`&size=1&format=json`
+			`&format=json`
 		const response = await fetchJson(endpoint)
-		const episodes = response.episodes
-		const updateResult = episodes[0].listenpodfile.url
 
-		return updateResult
+		return response.episode.listenpodfile.url
 	},
 }
 
