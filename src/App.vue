@@ -6,7 +6,9 @@ import PodPlayer from "@/components/PodPlayer.vue";
 <template>
 
   <div class="wrapper">
-    <RouterView />
+    <div class="view">
+      <RouterView />
+    </div>
 
     <div class="player">
       <PodPlayer />
@@ -33,6 +35,14 @@ import PodPlayer from "@/components/PodPlayer.vue";
 
 /* OBS: Hårdkodade margins */
 
+.view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8em;
+  width: 100%;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -42,11 +52,14 @@ import PodPlayer from "@/components/PodPlayer.vue";
 
 nav img {
   background-color: white;
-  padding: 0.5em;
+  border-radius: 0.2em;
+  padding: .2em;
 }
 
 nav img:hover {
   background-color: rgb(160, 160, 160);
+  filter: invert(1);
+  transition: .5s;
 }
 
 .footer {
@@ -59,7 +72,13 @@ nav img:hover {
 .player {
   position: fixed;
   bottom: 0em;
-  margin-bottom: 4em;
+  margin-bottom: 4.5em;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5em;
 }
 
 @media (min-width: 1024px) {
