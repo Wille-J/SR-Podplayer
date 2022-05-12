@@ -8,8 +8,8 @@ import { usePodStore } from "@/stores/pod.js"
 <template>
 
 	<div class="search">
-		<input type="search" v-model="searchText" class="searchBox" placeholder="Sök" />
-		<input type="button" value="Search" @click="performPodSearch" @keyup.enter="performPodSearch" />
+		<input type="search" v-model="searchText" class="searchBox" placeholder="Sök" @keyup.enter="performPodSearch" />
+		<input type="button" value="Search" @click="performPodSearch" />
 		<br>Eventuell filtreringsfunktion...
 	</div>
 

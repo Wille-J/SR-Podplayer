@@ -7,7 +7,8 @@
 <template>
 
 	<header>
-		<h1>Poddlers.</h1>
+		<img src="../assets/logo.svg" alt="logo.svg">
+		<img src="../assets/Poddler.svg" alt="Poddler.svg" height="200" width="300">
 	</header>
 
 	<div class="continueListen">
