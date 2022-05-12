@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from "vue-router";
 import PodPlayer from "@/components/PodPlayer.vue";
 </script>
 
-<template>
+<template >
 
   <div class="wrapper">
     <div class="view">
@@ -15,14 +15,14 @@ import PodPlayer from "@/components/PodPlayer.vue";
     </div>
 
     <div class="footer">
-      <div class="navbar">
+      <div class="navbar backgroundNav">
         <nav>
-          <RouterLink to="/"><img src="./assets/navbar/home.png" alt="home.png" width="40" height="40"></RouterLink>
-          <RouterLink to="/search"><img src="./assets/navbar/search.png" alt="search.png" width="40" height="40">
+          <RouterLink to="/"><img src="./assets/navbar/home.svg" alt="home.svg" width="40" height="40"></RouterLink>
+          <RouterLink to="/search"><img src="./assets/navbar/search.svg" alt="search.svg" width="40" height="40">
           </RouterLink>
-          <RouterLink to="/library"><img src="./assets/navbar/library.png" alt="library.png" width="40" height="40">
+          <RouterLink to="/library"><img src="./assets/navbar/library.svg" alt="library.svg" width="40" height="40">
           </RouterLink>
-          <RouterLink to="/profile"><img src="./assets/navbar/profile.png" alt="profile.png" width="40" height="40">
+          <RouterLink to="/profile"><img src="./assets/navbar/profile.svg" alt="profile.svg" width="40" height="40">
           </RouterLink>
         </nav>
       </div>
@@ -34,6 +34,10 @@ import PodPlayer from "@/components/PodPlayer.vue";
 @import "@/assets/base.css";
 
 /* OBS: Hårdkodade margins */
+
+/* .backgroundNav{
+  background-color: #1d1f2d;
+} */
 
 .view {
   display: flex;
@@ -48,6 +52,7 @@ import PodPlayer from "@/components/PodPlayer.vue";
   flex-direction: column;
   align-items: center;
   text-align: center;
+  
 }
 
 nav img {

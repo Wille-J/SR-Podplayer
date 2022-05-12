@@ -6,7 +6,7 @@
 
 <template>
 
-	<header>
+	<header class="backgroundNav">
 		<img src="../assets/logo.svg" alt="logo.svg">
 		<img src="../assets/Poddler.svg" alt="Poddler.svg" height="200" width="300">
 	</header>
