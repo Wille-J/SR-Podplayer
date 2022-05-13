@@ -1,0 +1,9 @@
+@use "node_modules/bootstrap/scss/bootstrap";
+
+/* Basic css för hela domänen, 
+Typsnitt och färger etc. */
+
+body {
+	background-color: #1d1f2d;
+	color: white; /*Temporary text-color*/
+}

@@ -14,17 +14,15 @@ import { usePodStore } from "@/stores/pod.js"
 		</div>
 	</div>
 
-	<div class="resultList">  <!-- GÖRA OM TILL EGET, SCROLLBART FÖNSTER -->
-		<div v-for="episode in episodes"
-			class="listItem"
-			@click="performUpdatePlayer(episode.listenpodfile.url)"
-		>
+	<div class="resultList ">
+		<!-- GÖRA OM TILL EGET, SCROLLBART FÖNSTER -->
+		<div v-for="episode in episodes" class="listItem" @click="performUpdatePlayer(episode.listenpodfile.url)">
 			<img :src="episode.imageurl" alt="pod-pic" width="70" height="70" />
 			<p>
 				{{ episode.title }}
 				<br />
 				<br />
-				Publicerades {{ convertDate(episode.publishdateutc) }}
+				Publicerades: {{ convertDate(episode.publishdateutc) }}
 			</p>
 		</div>
 	</div>
@@ -80,22 +78,22 @@ export default {
 
 <style scoped>
 /* OBS: Hårdkodade margins 
-Vid reload i webbläsare: hdatep://localhost:3000/pod
-laddas inte view/bilder in...
+Vid reload i webbläsare: 
+(http://localhost:3000/pod) laddas inte view/bilder in.
 */
 
 .header {
-    display: flex;
-    margin-bottom: 1em;
+	display: flex;
+	margin-bottom: 1em;
 }
 
 .header img {
-    margin-top: 2em;
+	margin-top: 2em;
 }
 
 .listItem {
 	align-items: center;
-	border-radius: .7em;
+	border-radius: 0.7em;
 }
 
 .listItem:hover {
@@ -108,20 +106,20 @@ laddas inte view/bilder in...
 	/* justify-content: space-between; */
 	padding: 0.2em;
 	text-align: left;
-    text-decoration: none;
+	text-decoration: none;
 	color: black;
 }
 
 .resultList {
-	border-radius: .7em;
+	border-radius: 0.7em;
 	background-color: rgb(190, 189, 201);
 	padding: 1em;
 	width: 90%;
-    /* margin-bottom: 7.5em; */
+	/* margin-bottom: 7.5em; */
 }
 
 img {
-	border-radius: .7em;
+	border-radius: 0.7em;
 	margin-right: 0.75em;
 }
 </style>

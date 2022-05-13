@@ -12,7 +12,7 @@ import { usePlayerStore } from "@/stores/player.js"
 <script>
 export default {
     computed: {
-        ...mapStores(usePlayerStore)
+        ...mapStores(usePlayerStore),
     },
 }
 </script>

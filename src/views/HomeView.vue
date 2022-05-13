@@ -5,23 +5,24 @@
 </script>
 
 <template>
+	<div class="text-center">
+		<img src="@/assets/logo.svg" alt="logo.svg" class="mySvg" />
 
-	<header class="backgroundNav">
-		<img src="../assets/logo.svg" alt="logo.svg">
-		<img src="../assets/Poddler.svg" alt="Poddler.svg" height="200" width="300">
-	</header>
-
-	<div class="continueListen">
-		<h2>Fortsätt lyssna</h2>
-		<p>Alternativ till att ha en databas...</p>
+		<img src="@/assets/Poddler.svg" alt="Poddler.svg" height="100" width="300" class="poddler" />
 	</div>
 
-	<div class="likedPods">
-		<h2>Gillade poddar</h2>
-		<p>Mest lyssnade poddar från API ?</p>
-		<p>Det finns programkategorier i det stora podd-anropet</p>
-	</div>
+	<div class="container p-3">
+		<div class="continueListen">
+			<h2>Förslag från SR:</h2>
+			<p>Hitta din nya favoritpodd!</p>
+		</div>
 
+		<div class="podTips">
+			<h2>Bästa poddarna från SR:</h2>
+			<p><em>{ Topp poddar från API ? }</em></p>
+			<p>Det finns programkategorier i det stora podd-anropet</p>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -33,4 +34,12 @@ export default {
 </script>
 
 <style scoped>
+.mySvg {
+	mix-blend-mode: pass-through;
+	margin-top: 20px;
+}
+
+.poddler {
+	filter: invert(1);
+}
 </style>
