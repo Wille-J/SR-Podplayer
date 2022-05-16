@@ -6,35 +6,27 @@ import { usePodStore } from "@/stores/pod.js"
 </script>
 
 <template>
-	<div class="search text-center p-5">
-		<input type="search" v-model="searchText" class="searchBox" placeholder="Sök" @keyup.enter="performPodSearch" />
-		<input type="button" value="Search" @click="performPodSearch" />
-		<br />Eventuell filtreringsfunktion...
+	<div class="search p-3">
+		<input type="search" class="form-control w-50 mx-auto" v-model="searchText" @keyup.enter="performPodSearch"
+			placeholder=" Sök..">
 	</div>
 
-	<!-- FÖRSLAG PÅ NAVIGERING: -->
-	<!-- /search/:searchText -->
-	<!-- /search/results/episodes -->
-	<!-- /search/episodes -->
+	<div class="d-flex justify-content-center">
+		<div class="resultList mb-3">
 
-	<div class="resultList bg-info rounded">
-		<!-- GÖRA OM TILL EGET, SCROLLBART FÖNSTER -->
-		<RouterLink to="/pod" v-for="pod in pods" @click="performLoadEpisodes(pod)" class="listItem">
-			<div class="text-center">
-				<img :src="pod.image" alt="pod-pic" width="90" height="90" />
-				{{ pod.name }}
-				<br /><br />
-				{{ pod.category }}
-			</div>
-		</RouterLink>
+			<RouterLink to="/pod" v-for="pod in pods" @click="performLoadEpisodes(pod)" class="listItem">
+				<div class="text-center p-2">
+					<img :src="pod.image" alt="pod-pic" width="90" height="90" />
+					{{ pod.name }}
+					<br /><br />
+					{{ pod.category }}
+				</div>
+			</RouterLink>
+
+		</div>
 		<!-- HAMPUS: a tagg - prevent click - överskriva @click-->
 	</div>
 
-	Sökhistorik:
-	<br />
-	<br />Enklare databas?
-	<br />PiniaStore?
-	<br />(under denna session)
 </template>
 
 <script>
@@ -65,12 +57,6 @@ export default {
 </script>
 
 <style scoped>
-/*
-
-.search {
-	padding: 2em;
-}
-
 .listItem {
 	align-items: center;
 	border-radius: 0.7em;
@@ -86,27 +72,24 @@ export default {
 	padding: 0.2em;
 	text-align: left;
 	text-decoration: none;
-	color: black;
+	color: white;
 }
-
-*/
 
 .resultList {
-	/* 
 	border-radius: 0.7em;
-	background-color: rgb(190, 189, 201);
-	padding: 1em; 
-	*/
-
+	background-color: #252836;
+	padding: 1em;
 	width: 90%;
+	overflow-y: scroll;
 }
 
-/*
+::-webkit-scrollbar {
+	width: 0;
+	background: transparent;
+}
 
 img {
 	border-radius: 0.7em;
 	margin-right: 0.75em;
 }
-
-*/
 </style>

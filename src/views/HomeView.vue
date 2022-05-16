@@ -1,14 +1,11 @@
 <script setup>
-// Här kan vi importera saker om vi vill,
-// har vi en "setup" så ligger den högst,
-// men taggen är inte ett krav
 </script>
 
 <template>
 	<div class="text-center">
 		<img src="@/assets/logo.svg" alt="logo.svg" class="mySvg" />
 
-		<img src="@/assets/Poddler.svg" alt="Poddler.svg" height="100" width="300" class="poddler" />
+		<!-- Poddler-text-logo <img src="@/assets/Poddler.svg" alt="Poddler.svg" height="100" width="300" class="poddler" /> -->
 	</div>
 
 	<div class="container p-3">
@@ -27,9 +24,6 @@
 
 <script>
 export default {
-	// JavaScript
-	// Komponenter kallar vi med stor bokstav (typ klasser)
-	// ROUTER: Varje ny sak vi kan klicka på, gör vi som en egen komponent (vy - "view")
 }
 </script>
 

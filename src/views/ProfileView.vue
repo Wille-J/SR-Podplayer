@@ -15,10 +15,7 @@
 
 		<div class="p-4">
 			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel eos
-			recusandae eaque perferendis maiores porro reprehenderit hic doloribus
-			quis, similique delectus repellendus molestiae omnis eum blanditiis
-			obcaecati perspiciatis aliquam odit. Lorem, ipsum dolor sit amet
-			consectetur adipisicing elit.
+			recusandae eaque perferendis maiores porro reprehenderit hic doloribus.
 		</div>
 
 	</div>

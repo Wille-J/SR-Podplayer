@@ -6,24 +6,25 @@ import { usePodStore } from "@/stores/pod.js"
 </script>
 
 <template>
-	<div class="header">
+	<div class="header justify-content-center p-3">
 		<img :src="podStore.pod.image" alt="pod-pic" width="100" height="100" />
 		<div>
 			<h1>{{ podStore.pod.name }}</h1>
 			{{ podStore.pod.desc }}
 		</div>
 	</div>
-
-	<div class="resultList ">
-		<!-- GÖRA OM TILL EGET, SCROLLBART FÖNSTER -->
-		<div v-for="episode in episodes" class="listItem" @click="performUpdatePlayer(episode.listenpodfile.url)">
-			<img :src="episode.imageurl" alt="pod-pic" width="70" height="70" />
-			<p>
-				{{ episode.title }}
-				<br />
-				<br />
-				Publicerades: {{ convertDate(episode.publishdateutc) }}
-			</p>
+	<div class="d-flex justify-content-center">
+		<div class="resultList mb-3">
+			<!-- GÖRA OM TILL EGET, SCROLLBART FÖNSTER -->
+			<div v-for="episode in episodes" class="listItem text-center p-2"
+				@click="performUpdatePlayer(episode.listenpodfile.url)">
+				<img :src="episode.imageurl" alt="pod-pic" width="70" height="70" />
+				<p>
+					{{ episode.title }}
+					<br />
+					Publicerades: {{ convertDate(episode.publishdateutc) }}
+				</p>
+			</div>
 		</div>
 	</div>
 </template>
@@ -77,18 +78,13 @@ export default {
 </script>
 
 <style scoped>
-/* OBS: Hårdkodade margins 
-Vid reload i webbläsare: 
-(http://localhost:3000/pod) laddas inte view/bilder in.
-*/
-
 .header {
 	display: flex;
 	margin-bottom: 1em;
 }
 
 .header img {
-	margin-top: 2em;
+	margin-top: 0.5em;
 }
 
 .listItem {
@@ -103,19 +99,25 @@ Vid reload i webbläsare:
 
 .resultList * {
 	display: flex;
-	/* justify-content: space-between; */
 	padding: 0.2em;
 	text-align: left;
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 
 .resultList {
 	border-radius: 0.7em;
-	background-color: rgb(190, 189, 201);
+	background-color: #252836;
 	padding: 1em;
 	width: 90%;
+	overflow-y: scroll;
+	/* max-height: 25em; */
 	/* margin-bottom: 7.5em; */
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	background: transparent;
 }
 
 img {
