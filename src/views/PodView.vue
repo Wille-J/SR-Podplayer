@@ -13,9 +13,10 @@ import { usePodStore } from "@/stores/pod.js"
 			{{ podStore.pod.desc }}
 		</div>
 	</div>
+
 	<div class="d-flex justify-content-center">
+
 		<div class="resultList mb-3">
-			<!-- GÖRA OM TILL EGET, SCROLLBART FÖNSTER -->
 			<div v-for="episode in episodes" class="listItem text-center p-2"
 				@click="performUpdatePlayer(episode.listenpodfile.url)">
 				<img :src="episode.imageurl" alt="pod-pic" width="70" height="70" />
@@ -26,6 +27,7 @@ import { usePodStore } from "@/stores/pod.js"
 				</p>
 			</div>
 		</div>
+
 	</div>
 </template>
 
@@ -62,12 +64,12 @@ export default {
 		...mapStores(usePodStore),
 	},
 	async mounted() {
-		// HAMPUS: " pod?. " utvärdera udaterycket, om det finns
+		// HAMPUS: " pod?. " utvärdera uttrycket, om det finns
 		console.log(this.podStore.pod.pubdate)
 		if (this.podStore.pod?.id)
 			this.episodes = await srApi.getEpisodes(this.podStore.pod.id)
 	},
-	// "Först körs mounted, watch håller koll på pod.id, om pod.id ändras körs watch för adate vänta på podStore..."
+	// "Först körs mounted, watch håller koll på pod.id, om pod.id ändras körs watch.. vänta på podStore..."
 	watch: {
 		async "podStore.pod.id"() {
 			console.warn("Watch ID Test: " + this.podStore.pod.id)
@@ -111,8 +113,6 @@ export default {
 	padding: 1em;
 	width: 90%;
 	overflow-y: scroll;
-	/* max-height: 25em; */
-	/* margin-bottom: 7.5em; */
 }
 
 ::-webkit-scrollbar {

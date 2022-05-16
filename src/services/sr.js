@@ -22,6 +22,7 @@ const sr = {
 					image: pod.programimage,
 					desc: pod.description,
 					// category: pod.programcategory.name,
+					// OBS: Alla program verkar inte ha en category
 				}
 
 				podResult.push(podObject)

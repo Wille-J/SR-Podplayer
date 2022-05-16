@@ -5,7 +5,8 @@
 	<div class="text-center">
 		<img src="@/assets/logo.svg" alt="logo.svg" class="mySvg" />
 
-		<!-- Poddler-text-logo <img src="@/assets/Poddler.svg" alt="Poddler.svg" height="100" width="300" class="poddler" /> -->
+		<!-- Poddler-text-logo 
+		<img src="@/assets/Poddler.svg" alt="Poddler.svg" height="100" width="300" class="poddler" /> -->
 	</div>
 
 	<div class="container p-3">

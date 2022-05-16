@@ -4,6 +4,9 @@ import PodPlayer from "@/components/PodPlayer.vue"
 </script>
 
 <template>
+
+	<!-- FLEXBOX TEST: -->
+
 	<!-- <div class="flexbox">
 		<div class="view">
 			<RouterView />
@@ -71,14 +74,17 @@ body {
 	padding: 0;
 }
 
-/* .view * {
-	max-height: 70vh;
-} */
 
 .navbar img {
 	filter: invert(1);
 	height: 1.8em;
 }
+
+/* 
+.view * {
+	max-height: 70vh;
+} 
+*/
 
 @media (min-width: 1024px) {}
 </style>
