@@ -18,6 +18,12 @@ import "bootstrap"
 		<div class="channels">
 			<h2>Sveriges Radios kanaler:</h2>
 			<p>Hitta din nya favoritpodd!</p>
+			<em>
+				{ P1 }<br />
+				{ P2 }<br />
+				{ P3 }<br />
+				{ P4 }
+			</em>
 
 			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
@@ -82,7 +88,7 @@ export default {
 <style scoped>
 .mySvg {
 	mix-blend-mode: pass-through;
-	margin-top: 20px;
+	margin-top: 1.25em;
 }
 
 .carousel {

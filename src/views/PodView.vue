@@ -97,11 +97,11 @@ export default {
 }
 
 .resultList {
-	border-radius: 0.7em;
 	background-color: #252836;
-	padding: 1em;
+	border-radius: 0.7em;
+	padding: 0.5em;
 	width: 90%;
-	max-height: 60vh;
+	max-height: 61vh;
 	overflow-y: scroll;
 }
 
@@ -110,7 +110,6 @@ export default {
 	text-align: left;
 	text-decoration: none;
 	color: white;
-	padding: 0.2em;
 }
 
 img {

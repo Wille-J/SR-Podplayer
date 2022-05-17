@@ -60,9 +60,9 @@ export default {
 	flex-direction: column;
 	background-color: #252836;
 	border-radius: 0.7em;
-	padding: 1em;
+	padding: 0.5em;
 	width: 90%;
-	max-height: 70vh;
+	max-height: 75vh;
 	overflow-y: scroll;
 }
 

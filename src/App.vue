@@ -55,6 +55,11 @@ import PodPlayer from "@/components/PodPlayer.vue"
 	background-color: #1d1f2df2;
 }
 
+.navbar img {
+	filter: invert(1);
+	height: 1.8em;
+}
+
 /* .flexbox {
 	display: flex;
 	flex-direction: column;
@@ -72,11 +77,6 @@ import PodPlayer from "@/components/PodPlayer.vue"
 /* body {
 	padding: 0;
 } */
-
-.navbar img {
-	filter: invert(1);
-	height: 1.8em;
-}
 
 @media (min-width: 768px) {
 	.navbar {
