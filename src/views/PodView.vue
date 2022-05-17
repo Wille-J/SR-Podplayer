@@ -95,7 +95,7 @@ export default {
 }
 
 .listItem:hover {
-	background-color: rgb(160, 159, 169);
+	background-color: #1d1f2d;
 	transition: 0.5s;
 }
 

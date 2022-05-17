@@ -9,23 +9,24 @@ async function fetchJson(myUrl) {
 const sr = {
 	async searchForPod(searchWord) {
 		// Alla radioprogram som har en podd (filter=program.haspod)
-		const endpoint = `https://api.sr.se/api/v2/programs?filter=program.haspod&filterValue=true&pagination=false&format=json`
+		const endpoint = `https://api.sr.se/api/v2/programs?filter=program.haspod&filterValue=true&isarchived=false&pagination=false&format=json`
 		const response = await fetchJson(endpoint)
 
 		const podResult = []
 
 		for (const pod of response.programs) {
-			if (pod.name.toLowerCase().includes(searchWord.toLowerCase())) {
-				const podObject = {
-					id: pod.id,
-					name: pod.name,
-					image: pod.programimage,
-					desc: pod.description,
-					// category: pod.programcategory.name,
-					// OBS: Alla program verkar inte ha en category
+			if (pod.programcategory !== undefined) {
+				if (pod.name.toLowerCase().includes(searchWord.toLowerCase())) {
+					const podObject = {
+						id: pod.id,
+						name: pod.name,
+						image: pod.programimage,
+						desc: pod.description,
+						category: pod.programcategory.name,
+						// OBS: Vissa program har programcategory.name = undefined
+					}
+					podResult.push(podObject)
 				}
-
-				podResult.push(podObject)
 			}
 		}
 

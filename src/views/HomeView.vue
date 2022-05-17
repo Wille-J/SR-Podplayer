@@ -9,7 +9,7 @@
 		<img src="@/assets/Poddler.svg" alt="Poddler.svg" height="100" width="300" class="poddler" /> -->
 	</div>
 
-	<div class="container p-3">
+	<div class="container p-3 mt-3">
 		<div class="continueListen">
 			<h2>Förslag från SR:</h2>
 			<p>Hitta din nya favoritpodd!</p>

@@ -8,25 +8,22 @@ import { usePodStore } from "@/stores/pod.js"
 <template>
 	<div class="search p-3">
 		<input type="search" class="form-control w-50 mx-auto" v-model="searchText" @keyup.enter="performPodSearch"
-			placeholder=" Sök..">
+			placeholder=" Sök.." />
 	</div>
 
 	<div class="d-flex justify-content-center">
 		<div class="resultList mb-3">
-
 			<RouterLink to="/pod" v-for="pod in pods" @click="performLoadEpisodes(pod)" class="listItem">
-				<div class="text-center p-2">
-					<img :src="pod.image" alt="pod-pic" width="90" height="90" />
+				<img :src="pod.image" alt="pod-pic" width="90" height="90" />
+				<div>
 					{{ pod.name }}
-					<br /><br />
-					{{ pod.category }}
+					<br />
+					<em>Kategori: </em>{{ pod.category }}
 				</div>
 			</RouterLink>
-
 		</div>
 		<!-- HAMPUS: a tagg - prevent click - överskriva @click-->
 	</div>
-
 </template>
 
 <script>
@@ -57,15 +54,42 @@ export default {
 </script>
 
 <style scoped>
-.listItem {
-	align-items: center;
+.resultList {
+	display: flex;
+	flex-direction: column;
+	background-color: #252836;
 	border-radius: 0.7em;
+	padding: 1em;
+	width: 90%;
+	overflow-y: scroll;
+}
+
+.listItem {
+	display: flex;
+	text-decoration: none;
+	color: white;
+	border-radius: 0.7em;
+	padding: 0.5em;
 }
 
 .listItem:hover {
-	background-color: rgb(160, 159, 169);
+	background-color: #1d1f2d;
 	transition: 0.5s;
 }
+
+img {
+	border-radius: 0.7em;
+	margin-right: 0.75em;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	background: transparent;
+}
+
+
+
+/*
 
 .resultList * {
 	display: flex;
@@ -88,8 +112,5 @@ export default {
 	background: transparent;
 }
 
-img {
-	border-radius: 0.7em;
-	margin-right: 0.75em;
-}
+ */
 </style>

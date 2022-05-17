@@ -86,5 +86,15 @@ body {
 } 
 */
 
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+	.navbar {
+		margin: auto;
+		width: 40%;
+	}
+
+	.view {
+		margin: auto;
+		width: 50%;
+	}
+}
 </style>
