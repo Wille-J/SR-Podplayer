@@ -60,7 +60,6 @@ export default {
 			this.p2 = await srApi.searchForPod("p2")
 			this.p3 = await srApi.searchForPod("p3")
 			this.p4 = await srApi.searchForPod("p4")
-			console.log(this.p1)
 		},
 		async performLoadEpisodes(pod) {
 			this.podStore.changePod(pod)

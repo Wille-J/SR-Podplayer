@@ -3,6 +3,7 @@ import srApi from "@/services/sr.js"
 import { mapStores } from "pinia"
 import { usePlayerStore } from "@/stores/player.js"
 import { usePodStore } from "@/stores/pod.js"
+import "bootstrap"
 </script>
 
 <template>
@@ -11,7 +12,7 @@ import { usePodStore } from "@/stores/pod.js"
 			placeholder=" Sök.." />
 	</div>
 
-	<div class="d-flex justify-content-center">
+	<div class="d-flex justify-content-center mytester">
 		<div class="resultList">
 			<RouterLink to="/pod" v-for="pod in pods" @click="performLoadEpisodes(pod)" class="listItem">
 				<img :src="pod.image" alt="pod-pic" width="90" height="90" />
@@ -61,6 +62,7 @@ export default {
 	border-radius: 0.7em;
 	padding: 1em;
 	width: 90%;
+	max-height: 70vh;
 	overflow-y: scroll;
 }
 

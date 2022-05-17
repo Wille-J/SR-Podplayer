@@ -7,33 +7,25 @@ import PodPlayer from "@/components/PodPlayer.vue"
 
 	<!-- FLEXBOX TEST: -->
 
-	<!-- <div class="flexbox">
+	<div class="flexbox">
 		<div class="view">
 			<RouterView />
 		</div>
 
-		<div class="footer text-center">
+		<div class="footer text-center fixed-bottom">
 			<div class="player">
 				<PodPlayer />
 			</div>
 			<nav class="navbar justify-content-between px-4 py-2">
-				<RouterLink to="/"
-					><img src="./assets/navbar/home.svg" alt="home.svg"
-				/></RouterLink>
-				<RouterLink to="/search"
-					><img src="./assets/navbar/search.svg" alt="search.svg" />
-				</RouterLink>
-				<RouterLink to="/library"
-					><img src="./assets/navbar/library.svg" alt="library.svg" />
-				</RouterLink>
-				<RouterLink to="/profile"
-					><img src="./assets/navbar/profile.svg" alt="profile.svg" />
-				</RouterLink>
+				<RouterLink to="/"><img src="./assets/navbar/home.svg" alt="home.svg" /></RouterLink>
+				<RouterLink to="/search"><img src="./assets/navbar/search.svg" alt="search.svg" /></RouterLink>
+				<RouterLink to="/library"><img src="./assets/navbar/library.svg" alt="library.svg" /></RouterLink>
+				<RouterLink to="/profile"><img src="./assets/navbar/profile.svg" alt="profile.svg" /></RouterLink>
 			</nav>
 		</div>
-	</div> -->
+	</div>
 
-	<div class="view">
+	<!-- <div class="view">
 		<RouterView />
 	</div>
 
@@ -43,34 +35,41 @@ import PodPlayer from "@/components/PodPlayer.vue"
 		</div>
 		<nav class="navbar justify-content-between px-4 py-2 ">
 			<RouterLink to="/"><img src="./assets/navbar/home.svg" alt="home.svg" /></RouterLink>
-			<RouterLink to="/search"><img src="./assets/navbar/search.svg" alt="search.svg" />
-			</RouterLink>
-			<RouterLink to="/library"><img src="./assets/navbar/library.svg" alt="library.svg" />
-			</RouterLink>
-			<RouterLink to="/profile"><img src="./assets/navbar/profile.svg" alt="profile.svg" />
-			</RouterLink>
+			<RouterLink to="/search"><img src="./assets/navbar/search.svg" alt="search.svg" /></RouterLink>
+			<RouterLink to="/library"><img src="./assets/navbar/library.svg" alt="library.svg" /></RouterLink>
+			<RouterLink to="/profile"><img src="./assets/navbar/profile.svg" alt="profile.svg" /></RouterLink>
 		</nav>
-	</div>
+	</div> -->
+
 </template>
 
 <style>
 @import "@/assets/style/base.scss";
 
+::-webkit-scrollbar {
+	width: 0;
+	background: transparent;
+}
+
 .footer {
-	padding-top: 1rem;
 	background-color: #1d1f2df2;
 }
 
 /* .flexbox {
 	display: flex;
 	flex-direction: column;
-}
+} */
 
-.flexbox footer {
-	height: auto;
-}
+/* .view {
+	height: 80vh;
+	overflow-y: scroll;
+} */
 
-body {
+/* .flexbox .footer {
+	height: 20vh;
+} */
+
+/* body {
 	padding: 0;
 } */
 
@@ -79,13 +78,7 @@ body {
 	height: 1.8em;
 }
 
-/* 
-.view * {
-	max-height: 70vh;
-} 
-*/
-
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
 	.navbar {
 		margin: auto;
 		width: 40%;
@@ -93,7 +86,7 @@ body {
 
 	.view {
 		margin: auto;
-		width: 50%;
+		width: 60%;
 	}
 }
 </style>

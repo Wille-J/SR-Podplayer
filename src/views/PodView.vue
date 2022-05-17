@@ -15,7 +15,6 @@ import { usePodStore } from "@/stores/pod.js"
 	</div>
 
 	<div class="d-flex justify-content-center">
-
 		<div class="resultList mb-3">
 			<div v-for="episode in episodes" class="listItem text-center p-2"
 				@click="performUpdatePlayer(episode.listenpodfile.url)">
@@ -27,7 +26,6 @@ import { usePodStore } from "@/stores/pod.js"
 				</p>
 			</div>
 		</div>
-
 	</div>
 </template>
 
@@ -65,7 +63,6 @@ export default {
 	},
 	async mounted() {
 		// HAMPUS: " pod?. " utvärdera uttrycket, om det finns
-		console.log(this.podStore.pod.pubdate)
 		if (this.podStore.pod?.id)
 			this.episodes = await srApi.getEpisodes(this.podStore.pod.id)
 	},
@@ -99,29 +96,30 @@ export default {
 	transition: 0.5s;
 }
 
-.resultList * {
-	display: flex;
-	padding: 0.2em;
-	text-align: left;
-	text-decoration: none;
-	color: white;
-}
-
 .resultList {
 	border-radius: 0.7em;
 	background-color: #252836;
 	padding: 1em;
 	width: 90%;
+	max-height: 60vh;
 	overflow-y: scroll;
 }
 
-::-webkit-scrollbar {
-	width: 0;
-	background: transparent;
+.resultList * {
+	display: flex;
+	text-align: left;
+	text-decoration: none;
+	color: white;
+	padding: 0.2em;
 }
 
 img {
 	border-radius: 0.7em;
 	margin-right: 0.75em;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	background: transparent;
 }
 </style>
