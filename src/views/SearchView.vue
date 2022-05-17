@@ -12,7 +12,7 @@ import { usePodStore } from "@/stores/pod.js"
 	</div>
 
 	<div class="d-flex justify-content-center">
-		<div class="resultList mb-3">
+		<div class="resultList">
 			<RouterLink to="/pod" v-for="pod in pods" @click="performLoadEpisodes(pod)" class="listItem">
 				<img :src="pod.image" alt="pod-pic" width="90" height="90" />
 				<div>
@@ -86,31 +86,4 @@ img {
 	width: 0;
 	background: transparent;
 }
-
-
-
-/*
-
-.resultList * {
-	display: flex;
-	padding: 0.2em;
-	text-align: left;
-	text-decoration: none;
-	color: white;
-}
-
-.resultList {
-	border-radius: 0.7em;
-	background-color: #252836;
-	padding: 1em;
-	width: 90%;
-	overflow-y: scroll;
-}
-
-::-webkit-scrollbar {
-	width: 0;
-	background: transparent;
-}
-
- */
 </style>

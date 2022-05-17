@@ -16,6 +16,12 @@ const sr = {
 
 		for (const pod of response.programs) {
 			if (pod.programcategory !== undefined) {
+				// const endpoint =
+				// 	`http://api.sr.se/api/v2/episodes/getlatest?programid=` +
+				// 	pod.id +
+				// 	`&format=json`
+				// const response = await fetchJson(endpoint)
+				// if (response.episode.listenpodfile !== undefined) {
 				if (pod.name.toLowerCase().includes(searchWord.toLowerCase())) {
 					const podObject = {
 						id: pod.id,
@@ -27,6 +33,7 @@ const sr = {
 					}
 					podResult.push(podObject)
 				}
+				// }
 			}
 		}
 
