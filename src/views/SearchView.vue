@@ -7,9 +7,9 @@ import "bootstrap"
 </script>
 
 <template>
-	<div class="search p-3">
-		<input type="search" class="form-control w-50 mx-auto" v-model="searchText" @keyup.enter="performPodSearch"
-			placeholder=" Sök.." />
+	<div class="search mt-4 mb-3">
+		<input type="search" class="searchInput form-control w-50 mx-auto" v-model="searchText"
+			@keyup.enter="performPodSearch" placeholder="Sök.." />
 	</div>
 
 	<div class="d-flex justify-content-center mytester">
@@ -60,9 +60,9 @@ export default {
 	flex-direction: column;
 	background-color: #252836;
 	border-radius: 0.7em;
-	padding: 0.5em;
+	padding: 0.3em;
 	width: 90%;
-	max-height: 75vh;
+	max-height: 74vh;
 	overflow-y: scroll;
 }
 
@@ -87,5 +87,19 @@ img {
 ::-webkit-scrollbar {
 	width: 0;
 	background: transparent;
+}
+
+.search input {
+	padding-left: 1.8em;
+	background-image: url("../assets/navbar/search.svg");
+	background-size: 18px 18px;
+	background-repeat: no-repeat;
+	background-position: 7px 0.7rem;
+}
+
+input.searchInput:focus {
+	outline: none;
+	border: none;
+	box-shadow: 0 0 0 0.2rem #726f9f;
 }
 </style>

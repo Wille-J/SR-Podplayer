@@ -3,6 +3,7 @@ import srApi from "@/services/sr.js"
 import { mapStores } from "pinia"
 import { usePlayerStore } from "@/stores/player.js"
 import { usePodStore } from "@/stores/pod.js"
+import "bootstrap"
 </script>
 
 <template>

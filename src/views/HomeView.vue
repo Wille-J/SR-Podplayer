@@ -3,48 +3,40 @@ import srApi from "@/services/sr.js"
 import { mapStores } from "pinia"
 import { usePlayerStore } from "@/stores/player.js"
 import { usePodStore } from "@/stores/pod.js"
+import Carousel from "@/components/Carousel.vue"
+import CP from "@/components/CustomPlayer.vue"
 import "bootstrap"
 </script>
 
 <template>
-	<div class="text-center">
-		<img src="@/assets/logo.svg" alt="logo.svg" class="mySvg" />
+	<RouterLink to="/about">
+		<div class="header text-center">
+			<img src="@/assets/logo.svg" alt="logo.svg" class="mySvg" />
+			<!-- Media query: Poddler text-logo -->
+			<img src="@/assets/Poddler.svg" alt="Poddler.svg" height="100" width="300" class="poddler" />
+		</div>
+	</RouterLink>
 
-		<!-- Poddler-text-logo
-		<img src="@/assets/Poddler.svg" alt="Poddler.svg" height="100" width="300" class="poddler" /> -->
-	</div>
-
-	<div class="container p-3 mt-3">
+	<div class="container p-2">
 		<div class="channels">
-			<h2>Sveriges Radios kanaler:</h2>
+			<h4>Utforska Sveriges Radios kanaler:</h4>
 			<p>Hitta din nya favoritpodd!</p>
-			<em>
-				{ P1 }<br />
-				{ P2 }<br />
-				{ P3 }<br />
-				{ P4 }
-			</em>
 
-			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner">
-					<!-- Ska bara vara Obj.1 -->
-					<!-- <div class="carousel-item active">
-						<img class="d-block w-25" :src="p1[0].program.image" alt="First slide" />
-					</div> -->
-					<div class="carousel-item" v-for="pod in p1.slice(1)">
-						<img class="d-block w-25" :src="pod.image" alt="First slide" />
-					</div>
+			<div class="carousels">
+				<div class="carousel">
+					<Carousel :list="p1" id="P1" />
+				</div>
+				<div class="carousel">
+					<Carousel :list="p2" id="P2" />
+				</div>
+				<div class="carousel">
+					<Carousel :list="p3" id="P3" />
+				</div>
+				<div class="carousel">
+					<Carousel :list="p4" id="P4" />
 				</div>
 			</div>
 
-			<!-- <div class="resultList mb-3">
-				<RouterLink to="/pod" v-for="pod in p1" @click="performLoadEpisodes(pod)" class="listItem">
-					<img :src="pod.image" alt="pod-pic" width="90" height="90" />
-					<div>
-						{{ pod.name }}
-					</div>
-				</RouterLink>
-			</div> -->
 		</div>
 	</div>
 </template>
@@ -86,17 +78,31 @@ export default {
 </script>
 
 <style scoped>
-.mySvg {
-	mix-blend-mode: pass-through;
-	margin-top: 1.25em;
+.carousels {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+	overflow-y: scroll;
+	max-height: 47vh;
 }
 
 .carousel {
-	/* display: flex;
-	flex-direction: row;
-	overflow-x: scroll; */
-	background-color: #252836;
+	margin: 0.5em;
 	border-radius: 0.7em;
+}
+
+.header,
+a {
+	display: block;
+	width: fit-content;
+	margin: auto;
+}
+
+.mySvg {
+	mix-blend-mode: pass-through;
+	margin-top: 1.25em;
 }
 
 #carousel-inner {
@@ -109,7 +115,15 @@ export default {
 	transition: 0.5s;
 }
 
-/* .poddler {
+.poddler {
 	filter: invert(1);
-} */
+	padding: 0.5em;
+	margin-left: 0.5em;
+}
+
+@media (max-width: 768px) {
+	.poddler {
+		display: none;
+	}
+}
 </style>

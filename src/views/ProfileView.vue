@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import "bootstrap"
+</script>
 
 <template>
 	<div class="library text-center p-4">

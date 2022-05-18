@@ -4,7 +4,8 @@ import { usePlayerStore } from "@/stores/player.js"
 </script>
 
 <template>
-    <audio controls id="mediaPlayer" :src="playerStore.url" type="audio/mpeg">
+    <audio class="audioPlayer" controls id="mediaPlayer" :src="playerStore.url" type="audio/mpeg"
+        controlsList="nodownload noplaybackrate">
         Your browser does not support the audio tag.
     </audio>
 </template>
@@ -14,6 +15,8 @@ export default {
     computed: {
         ...mapStores(usePlayerStore),
     },
+
+
 }
 </script>
 

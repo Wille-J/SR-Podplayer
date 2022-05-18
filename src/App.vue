@@ -1,11 +1,10 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router"
 import PodPlayer from "@/components/PodPlayer.vue"
+import "bootstrap"
 </script>
 
 <template>
-
-	<!-- FLEXBOX TEST: -->
 
 	<div class="flexbox">
 		<div class="view">
@@ -25,22 +24,6 @@ import PodPlayer from "@/components/PodPlayer.vue"
 		</div>
 	</div>
 
-	<!-- <div class="view">
-		<RouterView />
-	</div>
-
-	<div class="footer text-center fixed-bottom">
-		<div class="player">
-			<PodPlayer />
-		</div>
-		<nav class="navbar justify-content-between px-4 py-2 ">
-			<RouterLink to="/"><img src="./assets/navbar/home.svg" alt="home.svg" /></RouterLink>
-			<RouterLink to="/search"><img src="./assets/navbar/search.svg" alt="search.svg" /></RouterLink>
-			<RouterLink to="/library"><img src="./assets/navbar/library.svg" alt="library.svg" /></RouterLink>
-			<RouterLink to="/profile"><img src="./assets/navbar/profile.svg" alt="profile.svg" /></RouterLink>
-		</nav>
-	</div> -->
-
 </template>
 
 <style>
@@ -52,7 +35,7 @@ import PodPlayer from "@/components/PodPlayer.vue"
 }
 
 .footer {
-	background-color: #1d1f2df2;
+	background-color: #1d1f2d;
 }
 
 .navbar img {
@@ -60,25 +43,12 @@ import PodPlayer from "@/components/PodPlayer.vue"
 	height: 1.8em;
 }
 
-/* .flexbox {
-	display: flex;
-	flex-direction: column;
-} */
-
-/* .view {
-	height: 80vh;
-	overflow-y: scroll;
-} */
-
-/* .flexbox .footer {
-	height: 20vh;
-} */
-
-/* body {
-	padding: 0;
-} */
-
 @media (min-width: 768px) {
+	/* .player {
+			margin: auto;
+			width: 60%;
+	} */
+
 	.navbar {
 		margin: auto;
 		width: 40%;

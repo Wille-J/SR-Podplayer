@@ -1,6 +1,7 @@
 /scrap/
 /.vscode/
 /node_modules/
+/src/components/__tests__/
 
 # Logs 
 logs
