@@ -15,8 +15,6 @@ export default {
     computed: {
         ...mapStores(usePlayerStore),
     },
-
-
 }
 </script>
 

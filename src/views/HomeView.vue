@@ -4,7 +4,6 @@ import { mapStores } from "pinia"
 import { usePlayerStore } from "@/stores/player.js"
 import { usePodStore } from "@/stores/pod.js"
 import Carousel from "@/components/Carousel.vue"
-import CP from "@/components/CustomPlayer.vue"
 import "bootstrap"
 </script>
 
@@ -18,9 +17,9 @@ import "bootstrap"
 	</RouterLink>
 
 	<div class="container p-2">
-		<div class="channels">
+		<div class=" channels">
 			<h4>Utforska Sveriges Radios kanaler:</h4>
-			<p>Hitta din nya favoritpodd!</p>
+			<em>Hitta din nya favoritpodd!</em>
 
 			<div class="carousels">
 				<div class="carousel">

@@ -44,11 +44,6 @@ import "bootstrap"
 }
 
 @media (min-width: 768px) {
-	/* .player {
-			margin: auto;
-			width: 60%;
-	} */
-
 	.navbar {
 		margin: auto;
 		width: 40%;

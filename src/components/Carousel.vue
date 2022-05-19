@@ -1,4 +1,8 @@
 <script setup>
+import srApi from "@/services/sr.js"
+import { mapStores } from "pinia"
+import { usePlayerStore } from "@/stores/player.js"
+import { usePodStore } from "@/stores/pod.js"
 </script>
 
 <template>
@@ -7,10 +11,14 @@
         <div class="carousel-inner">
             <!-- Ska bara vara Obj.1 -->
             <div class="carousel-item active">
-                <img class="d-block w-100" :src="list[0]?.image" alt="First slide" />
+                <RouterLink to="/pod" @click="performLoadEpisodes(list[0])" class="listItem">
+                    <img class="d-block w-100" :src="list[0]?.image" alt="First slide" />
+                </RouterLink>
             </div>
             <div class="carousel-item" v-for="pod in list.slice(1)">
-                <img class="d-block w-100" :src="pod.image" alt="First slide" />
+                <RouterLink to="/pod" @click="performLoadEpisodes(pod)" class="listItem">
+                    <img class="d-block w-100" :src="pod.image" alt="First slide" />
+                </RouterLink>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" :data-bs-target="'#' + id" data-bs-slide="prev">
@@ -30,7 +38,19 @@ export default {
     props: {
         list: Array,
         id: String
-    }
+    },
+    methods: {
+        async performLoadEpisodes(pod) {
+            this.podStore.changePod(pod)
+            let audioUrl = await srApi.loadLatestEpisode(pod.id)
+            this.playerStore.changeUrl(audioUrl)
+            // this.$route.push('/pod')		HAMPUS: Laddar in view:en när allt är klart.
+        },
+    },
+    computed: {
+        ...mapStores(usePlayerStore),
+        ...mapStores(usePodStore),
+    },
 }
 </script>
 

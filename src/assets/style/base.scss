@@ -1,11 +1,5 @@
 @use "node_modules/bootstrap/scss/bootstrap";
 
-/* För felsökning: */
-/* * {outline: 1px solid red;} */
-
-/* Basic css för hela domänen, 
-Typsnitt och färger etc. */
-
 body {
 	background-color: #1d1f2d;
 	color: white; /*Text-color*/
@@ -13,44 +7,17 @@ body {
 }
 
 /* Audio player css */
-
 audio {
 	width: 90vw;
-	height: 54px;
+	height: 7.5vh;
+}
+
+@media (min-width: 768px) {
+	audio {
+		width: 53vw;
+	}
 }
 
 audio::-webkit-media-controls-panel {
-	background-color: #1d1f2d !important;
-}
-
-audio::-webkit-media-controls-play-button {
 	background-color: #726f9f;
-	border-radius: 50%;
-}
-
-audio::-webkit-media-controls-mute-button {
-	background-color: #726f9f;
-	border-radius: 50%;
-}
-
-audio::-webkit-media-controls-current-time-display {
-	color: #726f9f;
-}
-
-audio::-webkit-media-controls-timeline {
-	background-color: #726f9f;
-	border-radius: 25px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-audio::-webkit-media-controls-time-remaining-display {
-	color: #726f9f;
-}
-
-audio::-webkit-media-controls-volume-slider {
-	background-color: #726f9f;
-	border-radius: 25px;
-	padding-left: 8px;
-	padding-right: 8px;
 }
