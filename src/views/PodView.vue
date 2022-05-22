@@ -47,7 +47,6 @@ export default {
 		convertDate(pubdate) {
 			const trimmed = pubdate.slice(6, 16)
 			const date = new Date(trimmed * 1000)
-			//const humanDateFormat = date.toLocaleString()
 			return (
 				date.getFullYear() +
 				"-" +
@@ -63,11 +62,9 @@ export default {
 		...mapStores(usePodStore),
 	},
 	async mounted() {
-		// HAMPUS: " pod?. " utvärdera uttrycket, om det finns
 		if (this.podStore.pod?.id)
 			this.episodes = await srApi.getEpisodes(this.podStore.pod.id)
 	},
-	// "Först körs mounted, watch håller koll på pod.id, om pod.id ändras körs watch.. vänta på podStore..."
 	watch: {
 		async "podStore.pod.id"() {
 			console.warn("Watch ID Test: " + this.podStore.pod.id)
@@ -78,6 +75,10 @@ export default {
 </script>
 
 <style scoped>
+.resultList:empty {
+	display: none;
+}
+
 .header {
 	display: flex;
 	margin-bottom: 1em;

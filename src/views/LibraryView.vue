@@ -1,39 +1,53 @@
-<script setup></script>
+<script setup>
+import "bootstrap"
+</script>
 
 <template>
-	<!-- locolStorage.library.{{ playlistName }}.{{ episode }} -->
-	<!-- div v-for listItems in locolStorage.library -->
-
-	<!-- podview - Lista med episodes - Knapp med SPARA I SPELLISTA => Lägg till i Spellista-view <=> PINIA STORE  -->
-	<div class="library d-flex justify-content-center text center mt-4">
+	<div class="library d-flex text center m-4">
 		<h1>Bibliotek</h1>
 		<br />
 		<div class="resultList">
+
 			<div class="listItem">
-				<img src="@/assets/library/klipp.svg" alt="" />
-				Mina Klipp
-				<img src="@/assets/library/arrow.svg" alt="" />
+				<div>
+					<img src="@/assets/library/klipp.svg" alt="klipp.svg" />
+					Mina Klipp
+				</div>
+				<img src="@/assets/library/arrow.svg" alt="arrow.svg" />
 			</div>
+
 			<div class="listItem">
-				<img src="@/assets/library/vaxter.svg" alt="" />
-				Växtpoddar
-				<img src="@/assets/library/arrow.svg" alt="" />
+				<div>
+					<img src="@/assets/library/vaxter.svg" alt="vaxter.svg" />
+					Växtpoddar
+				</div>
+				<img src="@/assets/library/arrow.svg" alt="arrow.svg" />
 			</div>
+
 			<div class="listItem">
-				<img src="@/assets/library/crime.svg" alt="" />
-				Crime
-				<img src="@/assets/library/arrow.svg" alt="" />
+				<div>
+					<img src="@/assets/library/crime.svg" alt="crime.svg" />
+					Crime
+				</div>
+				<img src="@/assets/library/arrow.svg" alt="arrow.svg" />
 			</div>
+
 			<div class="listItem">
-				<img src="@/assets/library/humor.svg" alt="" />
-				Humor
-				<img src="@/assets/library/arrow.svg" alt="" />
+				<div>
+					<img src="@/assets/library/humor.svg" alt="humor.svg" />
+					Humor
+				</div>
+				<img src="@/assets/library/arrow.svg" alt="arrow.svg" />
 			</div>
+
 			<div class="listItem">
-				<img src="@/assets/library/teknik.svg" alt="" />
-				Teknik
-				<img src="@/assets/library/arrow.svg" alt="" />
+				<div>
+					<img src="@/assets/library/teknik.svg" alt="teknik.svg" />
+					Teknik
+				</div>
+				<img src="@/assets/library/arrow.svg" alt="arrow.svg" />
 			</div>
+
 		</div>
 	</div>
 </template>
@@ -43,10 +57,15 @@ export default {}
 </script>
 
 <style scoped>
+img {
+	padding-right: .5em;
+}
+
 .library {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: 80vh
 }
 
 .listItem {
@@ -54,7 +73,7 @@ export default {}
 	justify-content: space-between;
 	align-items: center;
 	border-radius: 0.7em;
-	padding: 0.5em;
+	padding: .5em;
 }
 
 .listItem:hover {

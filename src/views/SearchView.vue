@@ -7,14 +7,13 @@ import "bootstrap"
 </script>
 
 <template>
-
-	<div class="search mt-4 mb-3">
+	<div class="search mt-4">
 		<input type="search" class="searchInput form-control w-50 mx-auto" v-model="searchText"
 			@keyup.enter="performPodSearch" placeholder="Sök.." />
 	</div>
 
-	<div class="uppernavbar text-center mt-4 mb-3">
-		<img src="../assets/button.svg" alt="">
+	<div class="filterBar text-center mt-2 mb-2">
+		<img src="../assets/filter.svg" alt="filter.svg">
 	</div>
 
 	<div class="d-flex justify-content-center mytester">
@@ -28,7 +27,6 @@ import "bootstrap"
 				</div>
 			</RouterLink>
 		</div>
-		<!-- HAMPUS: a tagg - prevent click - överskriva @click-->
 	</div>
 </template>
 
@@ -48,7 +46,6 @@ export default {
 			this.podStore.changePod(pod)
 			let audioUrl = await srApi.loadLatestEpisode(pod.id)
 			this.playerStore.changeUrl(audioUrl)
-			// this.$route.push('/pod')		HAMPUS: Laddar in view:en när allt är klart.
 		},
 	},
 
@@ -60,6 +57,10 @@ export default {
 </script>
 
 <style scoped>
+.resultList:empty {
+	display: none;
+}
+
 .resultList {
 	display: flex;
 	flex-direction: column;
@@ -69,6 +70,11 @@ export default {
 	width: 90%;
 	max-height: 65vh;
 	overflow-y: scroll;
+}
+
+.resultList img {
+	border-radius: 0.7em;
+	margin-right: 0.75em;
 }
 
 .listItem {
@@ -82,11 +88,6 @@ export default {
 .listItem:hover {
 	background-color: #1d1f2d;
 	transition: 0.5s;
-}
-
-img {
-	border-radius: 0.7em;
-	margin-right: 0.75em;
 }
 
 ::-webkit-scrollbar {

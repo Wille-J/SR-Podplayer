@@ -5,7 +5,6 @@ import "bootstrap"
 </script>
 
 <template>
-
 	<div class="flexbox">
 		<div class="view">
 			<RouterView />
@@ -15,19 +14,44 @@ import "bootstrap"
 			<div class="player">
 				<PodPlayer />
 			</div>
+
 			<nav class="navbar justify-content-between px-4 py-2">
-				<RouterLink to="/"><img src="./assets/navbar/home.svg" alt="home.svg" /></RouterLink>
-				<RouterLink to="/search"><img src="./assets/navbar/search.svg" alt="search.svg" /></RouterLink>
-				<RouterLink to="/library"><img src="./assets/navbar/library.svg" alt="library.svg" /></RouterLink>
-				<RouterLink to="/profile"><img src="./assets/navbar/profile.svg" alt="profile.svg" /></RouterLink>
+				<RouterLink class="hus" to="/"><img src="./assets/navbar/home.svg" alt="home.svg" /></RouterLink>
+				<RouterLink class="sok" to="/search"><img src="./assets/navbar/search.svg" alt="search.svg" />
+				</RouterLink>
+				<RouterLink class="bibl" to="/library"><img src="./assets/navbar/library.svg" alt="library.svg" />
+				</RouterLink>
+				<RouterLink class="profil" to="/profile"><img src="./assets/navbar/profile.svg" alt="profile.svg" />
+				</RouterLink>
 			</nav>
 		</div>
 	</div>
-
 </template>
 
 <style>
 @import "@/assets/style/base.scss";
+
+.hus:hover {
+	background: url("./assets/navbar/homeHover.svg") no-repeat;
+	background-position: 50%;
+}
+
+.sok:hover {
+	background: url("./assets/navbar/searchHover.svg") no-repeat;
+	background-position-x: 35%;
+	background-position-y: 40%;
+}
+
+.bibl:hover {
+	background: url("./assets/navbar/libraryHover.svg") no-repeat;
+	background-position-x: 50%;
+	background-position-y: 50%;
+}
+
+.profil:hover {
+	background: url("./assets/navbar/profileHover.svg") no-repeat;
+	background-position: 50%;
+}
 
 ::-webkit-scrollbar {
 	width: 0;

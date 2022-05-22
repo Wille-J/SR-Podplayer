@@ -62,7 +62,6 @@ export default {
 			this.podStore.changePod(pod)
 			let audioUrl = await srApi.loadLatestEpisode(pod.id)
 			this.playerStore.changeUrl(audioUrl)
-			// this.$route.push('/pod')		HAMPUS: Laddar in view:en när allt är klart.
 		},
 	},
 
