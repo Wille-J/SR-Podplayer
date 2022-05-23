@@ -10,10 +10,13 @@ STEP-BY-STEP Instructions:
   1. Clone the repo.
   2. Open the repo in VSCode.
   3. Open a terminal
-  4. npm install
-  5. npm run dev (Compile and Hot-Reload for Development) 
-  6. npm build (Compile and Minify for Production)
-  7. npm run lint (Lint with ESLint - https://eslint.org/)
+  4. > npm install
+  5. > npm run dev     (Compile and Hot-Reload for Devs) 
+  
+  -- Optional 1: 
+  > npm run lint   (ESLint - https://eslint.org/)
+  -- Optional 2: 
+  > npm run build   (or Deploy to Netlify)
 ```
 
 Nice-to-know:
