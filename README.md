@@ -2,7 +2,7 @@
 
 Deployed site: https://poddler.netlify.app/
 
-The project using the Swedish Radio open API:
+The project is using the Swedish Radio open API:
 https://sverigesradio.se/artikel/7591703
 
 ```sh
