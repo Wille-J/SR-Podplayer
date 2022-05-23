@@ -24,7 +24,7 @@ There are some placeholder .svg files in the code, these are not meant to be cli
 
 KNOWN BUGS:
 - Some podcasts do not share the same structure for JSON-responses as the rest, being 'listenpodfile.url'. 
- These podcasts will not load into the audio-player.
+ \nThese podcasts will not load into the audio-player.
 - Refreshing the page while on the view 'PodView.vue' (after selecting a pod) does not reload the page properly.
 
 ## Recommended IDE Setup:
