@@ -4,8 +4,8 @@ import { useStorage } from "@vueuse/core"
 export const usePodStore = defineStore({
 	id: "pod",
 	state: () => ({
-		todos: useStorage("todos", []),
-		pod: "",
+		// todos: useStorage("todos", []),
+		pod: useStorage("pod", ""),
 	}),
 	actions: {
 		changePod(pod) {
