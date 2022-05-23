@@ -8,12 +8,11 @@ import "bootstrap"
 
 <template>
 	<div class="search mt-4">
-		<input type="search" class="searchInput form-control w-50 mx-auto" v-model="searchText"
-			@keyup.enter="performPodSearch" placeholder="Sök.." />
+		<input type="search" class="searchInput form-control w-50 mx-auto" v-model="searchText" @keyup.enter="performPodSearch" placeholder="Sök.." />
 	</div>
 
 	<div class="filterBar text-center mt-2 mb-2">
-		<img src="../assets/filter.svg" alt="filter.svg">
+		<img src="../assets/filter.svg" alt="filter.svg" />
 	</div>
 
 	<div class="d-flex justify-content-center mytester">

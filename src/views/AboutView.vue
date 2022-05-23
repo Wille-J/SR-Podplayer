@@ -7,7 +7,7 @@ import "bootstrap"
 		<h1>Om projektet</h1>
 		<a href="https://sverigesradio.se/oppetapi">Sveriges Radios Öppna API</a>
 	</div>
-	<div class="about-body p-3">
+	<div class="about-body p-2">
 		<h4>UX-studenter:</h4>
 		<ul>
 			<li>Gabriel Göransson</li>

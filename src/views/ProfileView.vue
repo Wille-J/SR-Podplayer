@@ -29,7 +29,6 @@ import "bootstrap"
 		<div class="stats">
 			<h3 class="text-left">Statistik</h3>
 			<img src="../assets/badges/stats.svg" alt="stats.svg" />
-
 		</div>
 	</div>
 </template>

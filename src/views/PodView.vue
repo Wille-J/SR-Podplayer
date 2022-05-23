@@ -17,8 +17,7 @@ import "bootstrap"
 
 	<div class="d-flex justify-content-center">
 		<div class="resultList mb-3">
-			<div v-for="episode in episodes" class="listItem text-center p-2"
-				@click="performUpdatePlayer(episode.listenpodfile.url)">
+			<div v-for="episode in episodes" class="listItem text-center p-2" @click="performUpdatePlayer(episode.listenpodfile.url)">
 				<img :src="episode.imageurl" alt="pod-pic" width="70" height="70" />
 				<p>
 					{{ episode.title }}
@@ -47,13 +46,7 @@ export default {
 		convertDate(pubdate) {
 			const trimmed = pubdate.slice(6, 16)
 			const date = new Date(trimmed * 1000)
-			return (
-				date.getFullYear() +
-				"-" +
-				("0" + (date.getMonth() + 1)).slice(-2) +
-				"-" +
-				("0" + date.getDate()).slice(-2)
-			)
+			return date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + ("0" + date.getDate()).slice(-2)
 		},
 	},
 
@@ -62,8 +55,7 @@ export default {
 		...mapStores(usePodStore),
 	},
 	async mounted() {
-		if (this.podStore.pod?.id)
-			this.episodes = await srApi.getEpisodes(this.podStore.pod.id)
+		if (this.podStore.pod?.id) this.episodes = await srApi.getEpisodes(this.podStore.pod.id)
 	},
 	watch: {
 		async "podStore.pod.id"() {

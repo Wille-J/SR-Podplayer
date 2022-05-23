@@ -16,12 +16,6 @@ const sr = {
 
 		for (const pod of response.programs) {
 			if (pod.programcategory !== undefined) {
-				// const endpoint =
-				// 	`http://api.sr.se/api/v2/episodes/getlatest?programid=` +
-				// 	pod.id +
-				// 	`&format=json`
-				// const response = await fetchJson(endpoint)
-				// if (response.episode.listenpodfile !== undefined) {
 				if (pod.name.toLowerCase().includes(searchWord.toLowerCase())) {
 					const podObject = {
 						id: pod.id,
@@ -29,11 +23,9 @@ const sr = {
 						image: pod.programimage,
 						desc: pod.description,
 						category: pod.programcategory.name,
-						// OBS: Vissa program har programcategory.name = undefined
 					}
 					podResult.push(podObject)
 				}
-				// }
 			}
 		}
 		return podResult
@@ -41,10 +33,7 @@ const sr = {
 
 	async getEpisodes(id) {
 		// Alla avsnitt för ett visst programid
-		const endpoint =
-			`https://api.sr.se/api/v2/episodes?programid=` +
-			id +
-			`&pagination=false&format=json`
+		const endpoint = `https://api.sr.se/api/v2/episodes?programid=` + id + `&pagination=false&format=json`
 		const response = await fetchJson(endpoint)
 
 		return response.episodes
@@ -52,10 +41,7 @@ const sr = {
 
 	async loadLatestEpisode(id) {
 		// Det senaste avsnittet för ett visst programid
-		const endpoint =
-			`http://api.sr.se/api/v2/episodes/getlatest?programid=` +
-			id +
-			`&format=json`
+		const endpoint = `https://api.sr.se/api/v2/episodes/getlatest?programid=` + id + `&format=json`
 		const response = await fetchJson(endpoint)
 
 		return response.episode.listenpodfile.url

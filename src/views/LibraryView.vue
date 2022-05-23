@@ -7,7 +7,6 @@ import "bootstrap"
 		<h1>Bibliotek</h1>
 		<br />
 		<div class="resultList">
-
 			<div class="listItem">
 				<div>
 					<img src="@/assets/library/klipp.svg" alt="klipp.svg" />
@@ -47,7 +46,6 @@ import "bootstrap"
 				</div>
 				<img src="@/assets/library/arrow.svg" alt="arrow.svg" />
 			</div>
-
 		</div>
 	</div>
 </template>
@@ -58,14 +56,14 @@ export default {}
 
 <style scoped>
 img {
-	padding-right: .5em;
+	padding-right: 0.5em;
 }
 
 .library {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 80vh
+	height: 80vh;
 }
 
 .listItem {
@@ -73,7 +71,7 @@ img {
 	justify-content: space-between;
 	align-items: center;
 	border-radius: 0.7em;
-	padding: .5em;
+	padding: 0.5em;
 }
 
 .listItem:hover {

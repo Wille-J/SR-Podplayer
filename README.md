@@ -1,21 +1,17 @@
-# sr_podplayer_grupp4
-https://poddler.netlify.app/
+## sr_podplayer_grupp4:
 
-Project using the Swedish Radio open API: https://sverigesradio.se/artikel/7591703
+```sh
+Deployed site:https://poddler.netlify.app/
 
-# vue-podplayer
+Project using the Swedish Radio open API:
+https://sverigesradio.se/artikel/7591703
+```
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
+## Recommended IDE Setup:
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+### Project Setup
 
 ```sh
 npm install

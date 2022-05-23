@@ -17,12 +17,9 @@ import "bootstrap"
 
 			<nav class="navbar justify-content-between px-4 py-2">
 				<RouterLink class="hus" to="/"><img src="./assets/navbar/home.svg" alt="home.svg" /></RouterLink>
-				<RouterLink class="sok" to="/search"><img src="./assets/navbar/search.svg" alt="search.svg" />
-				</RouterLink>
-				<RouterLink class="bibl" to="/library"><img src="./assets/navbar/library.svg" alt="library.svg" />
-				</RouterLink>
-				<RouterLink class="profil" to="/profile"><img src="./assets/navbar/profile.svg" alt="profile.svg" />
-				</RouterLink>
+				<RouterLink class="sok" to="/search"><img src="./assets/navbar/search.svg" alt="search.svg" /></RouterLink>
+				<RouterLink class="bibl" to="/library"><img src="./assets/navbar/library.svg" alt="library.svg" /> </RouterLink>
+				<RouterLink class="profil" to="/profile"><img src="./assets/navbar/profile.svg" alt="profile.svg" /> </RouterLink>
 			</nav>
 		</div>
 	</div>

@@ -17,7 +17,7 @@ import "bootstrap"
 	</RouterLink>
 
 	<div class="container p-2">
-		<div class=" channels">
+		<div class="channels">
 			<h4>Utforska Sveriges Radios kanaler:</h4>
 			<em>Hitta din nya favoritpodd!</em>
 
@@ -35,7 +35,6 @@ import "bootstrap"
 					<Carousel :list="p4" id="P4" />
 				</div>
 			</div>
-
 		</div>
 	</div>
 </template>
