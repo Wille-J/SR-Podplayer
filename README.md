@@ -1,11 +1,9 @@
 ## sr_podplayer_grupp4:
 
-```sh
-Deployed site:https://poddler.netlify.app/
+Deployed site: https://poddler.netlify.app/
 
 Project using the Swedish Radio open API:
 https://sverigesradio.se/artikel/7591703
-```
 
 ## Recommended IDE Setup:
 
