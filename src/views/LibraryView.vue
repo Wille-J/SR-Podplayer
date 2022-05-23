@@ -85,7 +85,7 @@ img {
 	background-color: #252836;
 	border-radius: 0.7em;
 	padding: 0.3em;
-	width: 90%;
+	width: 100%;
 	max-height: 74vh;
 	overflow-y: scroll;
 }
