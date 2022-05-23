@@ -7,9 +7,9 @@ https://sverigesradio.se/artikel/7591703
 
 ```sh
 STEP-BY-STEP Instructions:
-  1. Clone the repo.
-  2. Open the repo in VSCode.
-  3. Open a terminal in VSCode.
+  1. Clone the repo. Either through terminal or press 'Code' and download as zip.
+  2. Open the folder/repo in VSCode.
+  3. Select a terminal in VSCode (powershell).
   4. > npm install
   5. > npm run dev     (Compile and Hot-Reload for Devs) 
   
