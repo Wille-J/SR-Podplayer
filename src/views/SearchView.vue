@@ -1,11 +1,3 @@
-<script setup>
-import srApi from "@/services/sr.js"
-import { mapStores } from "pinia"
-import { usePlayerStore } from "@/stores/player.js"
-import { usePodStore } from "@/stores/pod.js"
-import "bootstrap"
-</script>
-
 <template>
 	<div class="search mt-4">
 		<input type="search" class="searchInput form-control w-50 mx-auto" v-model="searchText" @keyup.enter="performPodSearch" placeholder="Sök.." />
@@ -30,6 +22,12 @@ import "bootstrap"
 </template>
 
 <script>
+import srApi from "@/services/sr.js"
+import { mapStores } from "pinia"
+import { usePlayerStore } from "@/stores/player.js"
+import { usePodStore } from "@/stores/pod.js"
+import "bootstrap"
+
 export default {
 	data() {
 		return {

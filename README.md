@@ -5,6 +5,8 @@ Deployed site: https://poddler.netlify.app/
 Project using the Swedish Radio open API:
 https://sverigesradio.se/artikel/7591703
 
+STEG FÖR STEG INSTRUKTIONER
+
 ## Recommended IDE Setup:
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
