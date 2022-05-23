@@ -1,6 +1,6 @@
 ## sr_podplayer_grupp4:
 
-Site to Netlify: https://poddler.netlify.app/
+Site deployed to Netlify: https://poddler.netlify.app/
 
 This project is using the Swedish Radio open API:
 https://sverigesradio.se/artikel/7591703
