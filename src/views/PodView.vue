@@ -31,6 +31,7 @@ import "bootstrap"
 
 <script>
 export default {
+	props: ["podId"],
 	data() {
 		return {
 			episodes: [],
